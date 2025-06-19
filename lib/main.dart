@@ -65,50 +65,48 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Expanded(
-          child: TextField(
-            controller: _controller,
-            onChanged: _onTextChanged,
-            maxLines: null,
-            minLines: null,
-            expands: true,
-            textAlignVertical: TextAlignVertical.top,
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: Theme.of(context).colorScheme.secondary.withAlpha(26),
+        child: TextField(
+          controller: _controller,
+          onChanged: _onTextChanged,
+          maxLines: null,
+          minLines: null,
+          expands: true,
+          textAlignVertical: TextAlignVertical.top,
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Theme.of(context).colorScheme.secondary.withAlpha(26),
 
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.0),
-                borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.secondary,
-                  width: 1.0,
-                ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16.0),
+              borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.secondary,
+                width: 1.0,
               ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.0),
-                borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.secondary,
-                  width: 1.0,
-                ),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16.0),
+              borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.secondary,
+                width: 1.0,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.0),
-                borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.secondary,
-                  width: 2.0,
-                ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16.0),
+              borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.secondary,
+                width: 2.0,
               ),
+            ),
 
-              hintText: 'Enter your output of `nnx.display(model)` here...',
-              hintStyle: TextStyle(
-                color: Theme.of(context).colorScheme.secondary.withAlpha(153),
-              ),
+            hintText: 'Enter your output of `nnx.display(model)` here...',
+            hintStyle: TextStyle(
+              color: Theme.of(context).colorScheme.secondary.withAlpha(153),
+            ),
 
-              // Padding inside TextField
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 16.0,
-              ),
+            // Padding inside TextField
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 16.0,
             ),
           ),
         ),
