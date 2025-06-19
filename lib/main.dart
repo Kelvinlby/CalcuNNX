@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,8 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller = TextEditingController();
   String title = '';
 
-  void _onTextChanged(String value) {
-    print('Text changed: $value');
+  void _onTextChanged(String text) {
+    final int? size = calculate(text);
+
+    if (size == null) {
+      setState(() {
+        title = 'Incorrect Input Format';
+      });
+    }
+    else {
+      setState(() {
+        title = 'Model Size: ${formatParameterCount(size)}';
+      });
+    }
   }
 
   @override
